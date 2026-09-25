@@ -1,7 +1,7 @@
 import {
-  IconClover,
   IconJesterHat,
   IconMerdoPhoto,
+  IconMotoHelmet,
   IconNinja,
   IconPhone,
   IconYinYang,
@@ -13,7 +13,7 @@ export const PLAYERS: PlayerProfile[] = [
   { id: 'sami', name: 'Sami', nickname: 'Orkun Kökçüüü', icon: IconNinja, color: 'slate' },
   { id: 'merdo', name: 'Merdo', nickname: 'Nigga', icon: IconMerdoPhoto, color: 'violet' },
   { id: 'ibo', name: 'İbo', nickname: 'Filozof', icon: IconJesterHat, color: 'rose' },
-  { id: 'ugur', name: 'Uğur', nickname: 'Moto Kurye', icon: IconClover, color: 'emerald' },
+  { id: 'ugur', name: 'Uğur', nickname: 'Moto Kurye', icon: IconMotoHelmet, color: 'emerald' },
   { id: 'cagri', name: 'Çağrı', nickname: 'Santral', icon: IconPhone, color: 'sky' },
 ]
 

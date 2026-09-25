@@ -163,6 +163,17 @@ export function IconJesterHat(props: IconProps) {
   )
 }
 
+export function IconMotoHelmet(props: IconProps) {
+  return (
+    <Icon {...props}>
+      <path d="M12 3a8 8 0 0 1 8 8v3a3 3 0 0 1-3 3H7a3 3 0 0 1-3-3v-3a8 8 0 0 1 8-8Z" />
+      <path d="M4.3 13h15.4" />
+      <path d="M7 13v3a1.2 1.2 0 0 0 1.2 1.2h7.6A1.2 1.2 0 0 0 17 16v-3" />
+      <path d="M9 9.5c1-1 4-1 5 0" />
+    </Icon>
+  )
+}
+
 export function IconClover(props: IconProps) {
   return (
     <Icon {...props}>
