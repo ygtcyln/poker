@@ -1,4 +1,5 @@
 import type { ReactNode, SVGProps } from 'react'
+import merdoPhoto from '../assets/merdo.png'
 
 export type IconProps = SVGProps<SVGSVGElement>
 
@@ -81,6 +82,19 @@ export function IconCards(props: IconProps) {
   )
 }
 
+export function IconJokerCard(props: IconProps) {
+  return (
+    <Icon {...props}>
+      <rect x="4" y="2" width="16" height="20" rx="2.5" />
+      <path d="M8.5 10.5c.6-3 1.3-4.7 3.5-6.5 2.2 1.8 2.9 3.5 3.5 6.5.9-.2 2-1.1 2.7-2 0 1.7-1 3-2.2 3.3.4.4 1.4 1.8 1.7 4.2H7c.3-2.4 1.3-3.8 1.7-4.2C7.5 11.5 6.5 10.2 6.5 8.5c.7.9 1.8 1.8 2.7 2.2" />
+      <circle cx="8.5" cy="7.5" r="0.7" fill="currentColor" stroke="none" />
+      <circle cx="12" cy="5" r="0.7" fill="currentColor" stroke="none" />
+      <circle cx="15.5" cy="7.5" r="0.7" fill="currentColor" stroke="none" />
+      <line x1="7" y1="17.5" x2="17" y2="17.5" />
+    </Icon>
+  )
+}
+
 // --- Oyuncu karakter ikonları --------------------------------------------
 
 export function IconYinYang(props: IconProps) {
@@ -150,5 +164,15 @@ export function IconPhone(props: IconProps) {
     <Icon {...props}>
       <path d="M4.5 4.5c0-1 .9-1.8 1.9-1.7l2.3.2 1.6 3.8-1.9 1.5c1 2.3 2.9 4.2 5.2 5.2l1.5-1.9 3.8 1.6.2 2.3c.1 1-.7 1.9-1.7 1.9C10.5 19.4 4.6 13.5 4.5 4.5Z" />
     </Icon>
+  )
+}
+
+export function IconMerdoPhoto({ className }: IconProps) {
+  return (
+    <img
+      src={merdoPhoto}
+      alt=""
+      className={`shrink-0 rounded-full object-cover ${className ?? ''}`}
+    />
   )
 }

@@ -1,4 +1,4 @@
-import { IconCards } from '../components/icons'
+import { IconJokerCard } from '../components/icons'
 import { getPlayer } from '../data/players'
 import { useGame } from '../context/GameContext'
 
@@ -14,7 +14,7 @@ export default function HomeScreen({ onNewGame, onDashboard, onResumeGame }: Hom
   return (
     <div className="flex flex-1 flex-col justify-center gap-6 p-6">
       <div className="text-center">
-        <IconCards className="mx-auto mb-2 h-16 w-16 text-emerald-400" />
+        <IconJokerCard className="mx-auto mb-2 h-16 w-16 text-emerald-400" />
         <h1 className="text-3xl font-extrabold">Poker Kasa Takip</h1>
         <p className="mt-1 text-sm text-white/50">Arkadaş grubu poker gecesi hesap defteri</p>
       </div>
