@@ -63,8 +63,8 @@ export default function HandResolutionModal({
                   className={`flex min-h-24 flex-col items-center justify-center gap-1 rounded-2xl border-2 bg-white/5 px-3 py-4 text-center active:scale-95 ${c.outline}`}
                 >
                   <p.icon className="h-8 w-8" />
-                  <span className="text-sm font-bold">{p.nickname}</span>
-                  <span className="text-xs opacity-60">{p.name}</span>
+                  <span className="text-sm font-bold">{p.name}</span>
+                  <span className="text-xs opacity-60">{p.nickname}</span>
                 </button>
               )
             })}
@@ -78,7 +78,7 @@ export default function HandResolutionModal({
                 <div className="flex items-center gap-2 rounded-xl bg-emerald-500/10 px-3 py-2 text-sm text-emerald-300">
                   <span>Kazanan:</span>
                   <winner.icon className="h-5 w-5" />
-                  <span className="font-bold">{winner.nickname}</span>
+                  <span className="font-bold">{winner.name}</span>
                 </div>
               )
             })()}
@@ -89,8 +89,8 @@ export default function HandResolutionModal({
               >
                 <p.icon className="h-6 w-6 shrink-0" />
                 <div className="flex-1">
-                  <div className="text-sm font-semibold">{p.nickname}</div>
-                  <div className="text-xs text-white/50">{p.name} kaç kaybetti?</div>
+                  <div className="text-sm font-semibold">{p.name}</div>
+                  <div className="text-xs text-white/50">{p.nickname} kaç kaybetti?</div>
                 </div>
                 <input
                   type="tel"

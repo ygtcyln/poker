@@ -37,7 +37,7 @@ export default function BuyInScreen({ playerIds, onBack, onStart }: BuyInScreenP
                 key={id}
                 className="flex items-center gap-1.5 rounded-full bg-white/10 px-3 py-1 text-sm"
               >
-                <p.icon className="h-4 w-4" /> {p.nickname}
+                <p.icon className="h-4 w-4" /> {p.name}
               </span>
             )
           })}

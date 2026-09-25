@@ -23,7 +23,7 @@ export default function HomeScreen({ onNewGame, onDashboard, onResumeGame }: Hom
         <div className="rounded-2xl border border-emerald-400/40 bg-emerald-500/10 p-4">
           <p className="mb-3 text-sm font-semibold text-emerald-300">Devam eden bir oyun var</p>
           <p className="mb-3 text-xs text-white/60">
-            {activeGame.playerIds.map((id) => getPlayer(id).nickname).join(', ')}
+            {activeGame.playerIds.map((id) => getPlayer(id).name).join(', ')}
           </p>
           <div className="flex gap-2">
             <button

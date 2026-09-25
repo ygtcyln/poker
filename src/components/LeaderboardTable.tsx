@@ -28,10 +28,10 @@ export default function LeaderboardTable({ rows }: LeaderboardTableProps) {
             <row.icon className={`h-7 w-7 shrink-0 ${c.text}`} />
             <div className="min-w-0 flex-1">
               <div className="flex items-center gap-1.5 truncate text-sm font-semibold">
-                {row.nickname} {rank && <rank.Icon className={rank.className} />}
+                {row.name} {rank && <rank.Icon className={rank.className} />}
               </div>
               <div className="truncate text-xs text-white/50">
-                {row.name} · {row.gamesPlayed} oyun
+                {row.nickname} · {row.gamesPlayed} oyun
               </div>
             </div>
             <div className="text-right">

@@ -52,9 +52,9 @@ export default function GameSummaryScreen({ onHome, onDashboard }: GameSummarySc
         <IconTrophy className="h-16 w-16 text-amber-400" />
         <p className="text-sm text-white/50">Oyunun Kazananı</p>
         <p className={`flex items-center gap-2 text-3xl font-extrabold ${winnerColor.text}`}>
-          <winner.icon className="h-8 w-8" /> {winner.nickname}
+          <winner.icon className="h-8 w-8" /> {winner.name}
         </p>
-        <p className="text-white/50">{winner.name}</p>
+        <p className="text-white/50">{winner.nickname}</p>
         {lastCompletedGame.endReason === 'manual' && (
           <p className="mt-1 text-xs text-white/30">Oyun manuel olarak bitirildi</p>
         )}
@@ -72,9 +72,9 @@ export default function GameSummaryScreen({ onHome, onDashboard }: GameSummarySc
             >
               <p.icon className="h-7 w-7 shrink-0" />
               <div className="min-w-0 flex-1">
-                <div className="truncate text-sm font-semibold">{p.nickname}</div>
+                <div className="truncate text-sm font-semibold">{p.name}</div>
                 <div className="truncate text-xs text-white/50">
-                  Final: {formatTL(result?.finalBalance ?? 0)}
+                  {p.nickname} · Final: {formatTL(result?.finalBalance ?? 0)}
                 </div>
               </div>
               <div

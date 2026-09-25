@@ -39,8 +39,8 @@ export default function EndGameModal({ activePlayers, onConfirm, onCancel }: End
                 className={`flex min-h-24 flex-col items-center justify-center gap-1 rounded-2xl border-2 bg-white/5 px-3 py-4 text-center active:scale-95 ${c.outline}`}
               >
                 <p.icon className="h-8 w-8" />
-                <span className="text-sm font-bold">{p.nickname}</span>
-                <span className="text-xs opacity-60">{p.name}</span>
+                <span className="text-sm font-bold">{p.name}</span>
+                <span className="text-xs opacity-60">{p.nickname}</span>
               </button>
             )
           })}

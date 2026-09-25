@@ -32,12 +32,12 @@ export default function DashboardScreen({ onBack }: DashboardScreenProps) {
                   <li key={g.id} className="rounded-xl border border-white/10 bg-white/5 p-3 text-sm">
                     <div className="mb-1 flex items-center justify-between">
                       <span className="flex items-center gap-1.5 font-semibold">
-                        <winner.icon className="h-4 w-4" /> {winner.nickname} kazandı
+                        <winner.icon className="h-4 w-4" /> {winner.name} kazandı
                       </span>
                       <span className="text-xs text-white/40">{formatDate(g.endedAt)}</span>
                     </div>
                     <div className="text-xs text-white/50">
-                      {g.playerIds.map((id) => getPlayer(id).nickname).join(', ')} · Kişi başı{' '}
+                      {g.playerIds.map((id) => getPlayer(id).name).join(', ')} · Kişi başı{' '}
                       {formatTL(g.buyIn)}
                     </div>
                   </li>

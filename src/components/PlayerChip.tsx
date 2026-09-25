@@ -22,8 +22,8 @@ export default function PlayerChip({ player, selected, onToggle, disabled }: Pla
       ].join(' ')}
     >
       <player.icon className="h-8 w-8" />
-      <span className="text-sm font-bold leading-tight">{player.nickname}</span>
-      <span className={selected ? 'text-xs opacity-80' : 'text-xs opacity-60'}>{player.name}</span>
+      <span className="text-sm font-bold leading-tight">{player.name}</span>
+      <span className={selected ? 'text-xs opacity-80' : 'text-xs opacity-60'}>{player.nickname}</span>
     </button>
   )
 }

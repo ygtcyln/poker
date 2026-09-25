@@ -22,7 +22,7 @@ export default function HandHistoryList({ hands }: HandHistoryListProps) {
           <li key={hand.id} className="rounded-xl border border-white/10 bg-white/5 p-3 text-sm">
             <div className="mb-1 flex items-center justify-between">
               <span className="flex items-center gap-1.5 font-semibold">
-                <winner.icon className="h-4 w-4" /> {winner.nickname} kazandı
+                <winner.icon className="h-4 w-4" /> {winner.name} kazandı
               </span>
               <span className="text-xs text-white/40">El {hands.length - idx}</span>
             </div>
@@ -31,7 +31,7 @@ export default function HandHistoryList({ hands }: HandHistoryListProps) {
                 const p = getPlayer(id as HandRecord['winnerId'])
                 return (
                   <span key={id}>
-                    {p.nickname}: -{formatTL(amount)}
+                    {p.name}: -{formatTL(amount)}
                   </span>
                 )
               })}
