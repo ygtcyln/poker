@@ -15,7 +15,7 @@ export default function HomeScreen({ onNewGame, onDashboard, onResumeGame }: Hom
       <div className="text-center">
         <div className="mb-2 text-6xl">🃏</div>
         <h1 className="text-3xl font-extrabold">Poker Kasa Takip</h1>
-        <p className="mt-1 text-sm text-white/50">"Kaybetmedim beyler, sadece kazanma anımı ileri bir tarihe erteledim.</p>
+        <p className="mt-1 text-sm text-white/50">Kaybetmedim beyler, sadece kazanma anımı ileri bir tarihe erteledim.</p>
       </div>
 
       {activeGame && activeGame.status === 'in_progress' && (
