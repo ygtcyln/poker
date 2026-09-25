@@ -1,4 +1,4 @@
-import { IconTrophy } from '../components/icons'
+import { LuTrophy } from 'react-icons/lu'
 import { getPlayer } from '../data/players'
 import { useGame } from '../context/GameContext'
 import { colorOf } from '../lib/colorClasses'
@@ -49,7 +49,7 @@ export default function GameSummaryScreen({ onHome, onDashboard }: GameSummarySc
   return (
     <div className="flex flex-1 flex-col p-6">
       <div className="flex flex-1 flex-col items-center justify-center gap-2 text-center">
-        <IconTrophy className="h-16 w-16 text-amber-400" />
+        <LuTrophy className="h-16 w-16 text-amber-400" />
         <p className="text-sm text-white/50">Oyunun Kazananı</p>
         <p className={`flex items-center gap-2 text-3xl font-extrabold ${winnerColor.text}`}>
           <winner.icon className="h-8 w-8" /> {winner.name}

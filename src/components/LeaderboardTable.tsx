@@ -1,4 +1,4 @@
-import { IconMedal, IconTrophy } from './icons'
+import { LuMedal, LuTrophy } from 'react-icons/lu'
 import { colorOf } from '../lib/colorClasses'
 import { formatSignedTL } from '../lib/format'
 import type { LeaderboardRow } from '../lib/gameLogic'
@@ -8,9 +8,9 @@ interface LeaderboardTableProps {
 }
 
 const RANK_STYLES = [
-  { Icon: IconTrophy, className: 'h-4 w-4 text-amber-400' },
-  { Icon: IconMedal, className: 'h-4 w-4 text-slate-300' },
-  { Icon: IconMedal, className: 'h-4 w-4 text-orange-400' },
+  { Icon: LuTrophy, className: 'h-4 w-4 text-amber-400' },
+  { Icon: LuMedal, className: 'h-4 w-4 text-slate-300' },
+  { Icon: LuMedal, className: 'h-4 w-4 text-orange-400' },
 ]
 
 export default function LeaderboardTable({ rows }: LeaderboardTableProps) {

@@ -3,7 +3,7 @@ import EndGameModal from '../components/EndGameModal'
 import HandHistoryList from '../components/HandHistoryList'
 import HandResolutionModal from '../components/HandResolutionModal'
 import Header from '../components/Header'
-import { IconChevronDown, IconChevronUp } from '../components/icons'
+import { LuChevronDown, LuChevronUp } from 'react-icons/lu'
 import PlayerBalanceCard from '../components/PlayerBalanceCard'
 import { getPlayer } from '../data/players'
 import { useGame } from '../context/GameContext'
@@ -77,7 +77,7 @@ export default function ActiveGameScreen({ onHome }: ActiveGameScreenProps) {
             className="mb-2 flex w-full items-center justify-between rounded-xl bg-white/5 px-3 py-2 text-sm font-semibold text-white/70"
           >
             <span>Son Eller ({activeGame.hands.length})</span>
-            {historyOpen ? <IconChevronUp className="h-4 w-4" /> : <IconChevronDown className="h-4 w-4" />}
+            {historyOpen ? <LuChevronUp className="h-4 w-4" /> : <LuChevronDown className="h-4 w-4" />}
           </button>
           {historyOpen && <HandHistoryList hands={activeGame.hands} />}
         </div>

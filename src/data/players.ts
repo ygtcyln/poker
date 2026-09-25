@@ -1,20 +1,15 @@
-import {
-  IconJesterHat,
-  IconMerdoPhoto,
-  IconMotoHelmet,
-  IconNinja,
-  IconPhone,
-  IconYinYang,
-} from '../components/icons'
+import { FaPhone } from 'react-icons/fa6'
+import { GiFullMotorcycleHelmet, GiJesterHat, GiNinjaHead, GiYinYang } from 'react-icons/gi'
+import { IconMerdoPhoto } from '../components/icons'
 import type { PlayerId, PlayerProfile } from '../types'
 
 export const PLAYERS: PlayerProfile[] = [
-  { id: 'yigit', name: 'Yiğit', nickname: 'Nerdesin Pango', icon: IconYinYang, color: 'amber' },
-  { id: 'sami', name: 'Sami', nickname: 'Orkun Kökçüüü', icon: IconNinja, color: 'slate' },
+  { id: 'yigit', name: 'Yiğit', nickname: 'Nerdesin Pango', icon: GiYinYang, color: 'amber' },
+  { id: 'sami', name: 'Sami', nickname: 'Orkun Kökçüüü', icon: GiNinjaHead, color: 'slate' },
   { id: 'merdo', name: 'Merdo', nickname: 'Nigga', icon: IconMerdoPhoto, color: 'violet' },
-  { id: 'ibo', name: 'İbo', nickname: 'Filozof', icon: IconJesterHat, color: 'rose' },
-  { id: 'ugur', name: 'Uğur', nickname: 'Moto Kurye', icon: IconMotoHelmet, color: 'emerald' },
-  { id: 'cagri', name: 'Çağrı', nickname: 'Santral', icon: IconPhone, color: 'sky' },
+  { id: 'ibo', name: 'İbo', nickname: 'Filozof', icon: GiJesterHat, color: 'rose' },
+  { id: 'ugur', name: 'Uğur', nickname: 'Moto Kurye', icon: GiFullMotorcycleHelmet, color: 'emerald' },
+  { id: 'cagri', name: 'Çağrı', nickname: 'Santral', icon: FaPhone, color: 'sky' },
 ]
 
 export const PLAYERS_BY_ID: Record<PlayerId, PlayerProfile> = PLAYERS.reduce(

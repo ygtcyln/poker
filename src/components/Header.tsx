@@ -1,4 +1,4 @@
-import { IconArrowLeft } from './icons'
+import { LuArrowLeft } from 'react-icons/lu'
 
 interface HeaderProps {
   title: string
@@ -16,7 +16,7 @@ export default function Header({ title, onBack, right }: HeaderProps) {
           aria-label="Geri"
           className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full text-white/80 active:bg-white/10"
         >
-          <IconArrowLeft className="h-5 w-5" />
+          <LuArrowLeft className="h-5 w-5" />
         </button>
       ) : (
         <span className="w-10 shrink-0" />

@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { IconArrowLeft } from './icons'
+import { LuArrowLeft } from 'react-icons/lu'
 import { colorOf } from '../lib/colorClasses'
 import { formatTL } from '../lib/format'
 import type { PlayerId, PlayerProfile } from '../types'
@@ -42,7 +42,7 @@ export default function HandResolutionModal({
           aria-label="Geri"
           className="flex h-10 w-10 items-center justify-center rounded-full active:bg-white/10"
         >
-          <IconArrowLeft className="h-5 w-5" />
+          <LuArrowLeft className="h-5 w-5" />
         </button>
         <h2 className="flex-1 text-center text-lg font-bold">
           {winnerId ? 'Kayıpları Gir' : 'Eli Kim Kazandı?'}
