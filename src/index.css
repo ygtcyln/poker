@@ -1,0 +1,28 @@
+@import "tailwindcss";
+
+html {
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  margin: 0;
+  background: #0f1115;
+  color: #f4f4f5;
+  font-family: system-ui, 'Segoe UI', Roboto, sans-serif;
+  overscroll-behavior-y: none;
+}
+
+#root {
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+}
+
+input[type='number']::-webkit-outer-spin-button,
+input[type='number']::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type='number'] {
+  -moz-appearance: textfield;
+}
