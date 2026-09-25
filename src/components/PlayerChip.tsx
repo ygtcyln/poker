@@ -21,7 +21,7 @@ export default function PlayerChip({ player, selected, onToggle, disabled }: Pla
         disabled && !selected ? 'opacity-40' : '',
       ].join(' ')}
     >
-      <span className="text-3xl leading-none">{player.emoji}</span>
+      <player.icon className="h-8 w-8" />
       <span className="text-sm font-bold leading-tight">{player.nickname}</span>
       <span className={selected ? 'text-xs opacity-80' : 'text-xs opacity-60'}>{player.name}</span>
     </button>

@@ -1,10 +1,12 @@
+import type { ComponentType, SVGProps } from 'react'
+
 export type PlayerId = 'yigit' | 'sami' | 'merdo' | 'ibo' | 'ugur' | 'cagri'
 
 export interface PlayerProfile {
   id: PlayerId
   name: string
   nickname: string
-  emoji: string
+  icon: ComponentType<SVGProps<SVGSVGElement>>
   color: string
 }
 

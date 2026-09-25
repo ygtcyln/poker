@@ -1,3 +1,5 @@
+import { IconArrowLeft } from './icons'
+
 interface HeaderProps {
   title: string
   onBack?: () => void
@@ -12,9 +14,9 @@ export default function Header({ title, onBack, right }: HeaderProps) {
           type="button"
           onClick={onBack}
           aria-label="Geri"
-          className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full text-xl text-white/80 active:bg-white/10"
+          className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full text-white/80 active:bg-white/10"
         >
-          ←
+          <IconArrowLeft className="h-5 w-5" />
         </button>
       ) : (
         <span className="w-10 shrink-0" />

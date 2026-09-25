@@ -1,3 +1,4 @@
+import { IconArrowLeft } from './icons'
 import { colorOf } from '../lib/colorClasses'
 import type { PlayerId, PlayerProfile } from '../types'
 
@@ -15,9 +16,9 @@ export default function EndGameModal({ activePlayers, onConfirm, onCancel }: End
           type="button"
           onClick={onCancel}
           aria-label="Geri"
-          className="flex h-10 w-10 items-center justify-center rounded-full text-xl active:bg-white/10"
+          className="flex h-10 w-10 items-center justify-center rounded-full active:bg-white/10"
         >
-          ←
+          <IconArrowLeft className="h-5 w-5" />
         </button>
         <h2 className="flex-1 text-center text-lg font-bold">Oyunu Kim Kazandı?</h2>
         <span className="w-10" />
@@ -37,7 +38,7 @@ export default function EndGameModal({ activePlayers, onConfirm, onCancel }: End
                 onClick={() => onConfirm(p.id)}
                 className={`flex min-h-24 flex-col items-center justify-center gap-1 rounded-2xl border-2 bg-white/5 px-3 py-4 text-center active:scale-95 ${c.outline}`}
               >
-                <span className="text-3xl leading-none">{p.emoji}</span>
+                <p.icon className="h-8 w-8" />
                 <span className="text-sm font-bold">{p.nickname}</span>
                 <span className="text-xs opacity-60">{p.name}</span>
               </button>

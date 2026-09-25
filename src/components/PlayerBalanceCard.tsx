@@ -17,7 +17,7 @@ export default function PlayerBalanceCard({ player, balance, busted }: PlayerBal
         busted ? 'opacity-50 grayscale' : c.soft,
       ].join(' ')}
     >
-      <span className="text-3xl leading-none">{player.emoji}</span>
+      <player.icon className={`h-8 w-8 shrink-0 ${busted ? '' : c.text}`} />
       <div className="min-w-0 flex-1">
         <div className="truncate text-sm font-semibold">{player.nickname}</div>
         <div className="truncate text-xs text-white/50">{player.name}</div>

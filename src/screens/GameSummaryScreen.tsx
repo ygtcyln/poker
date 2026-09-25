@@ -1,3 +1,4 @@
+import { IconTrophy } from '../components/icons'
 import { getPlayer } from '../data/players'
 import { useGame } from '../context/GameContext'
 import { colorOf } from '../lib/colorClasses'
@@ -48,10 +49,10 @@ export default function GameSummaryScreen({ onHome, onDashboard }: GameSummarySc
   return (
     <div className="flex flex-1 flex-col p-6">
       <div className="flex flex-1 flex-col items-center justify-center gap-2 text-center">
-        <div className="text-6xl">🏆</div>
+        <IconTrophy className="h-16 w-16 text-amber-400" />
         <p className="text-sm text-white/50">Oyunun Kazananı</p>
-        <p className={`text-3xl font-extrabold ${winnerColor.text}`}>
-          {winner.emoji} {winner.nickname}
+        <p className={`flex items-center gap-2 text-3xl font-extrabold ${winnerColor.text}`}>
+          <winner.icon className="h-8 w-8" /> {winner.nickname}
         </p>
         <p className="text-white/50">{winner.name}</p>
         {lastCompletedGame.endReason === 'manual' && (
@@ -69,7 +70,7 @@ export default function GameSummaryScreen({ onHome, onDashboard }: GameSummarySc
               key={id}
               className="flex items-center gap-3 rounded-2xl border border-white/10 bg-white/5 p-3"
             >
-              <span className="text-2xl">{p.emoji}</span>
+              <p.icon className="h-7 w-7 shrink-0" />
               <div className="min-w-0 flex-1">
                 <div className="truncate text-sm font-semibold">{p.nickname}</div>
                 <div className="truncate text-xs text-white/50">

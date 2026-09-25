@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { IconArrowLeft } from './icons'
 import { colorOf } from '../lib/colorClasses'
 import { formatTL } from '../lib/format'
 import type { PlayerId, PlayerProfile } from '../types'
@@ -39,9 +40,9 @@ export default function HandResolutionModal({
           type="button"
           onClick={winnerId ? () => setWinnerId(null) : onCancel}
           aria-label="Geri"
-          className="flex h-10 w-10 items-center justify-center rounded-full text-xl active:bg-white/10"
+          className="flex h-10 w-10 items-center justify-center rounded-full active:bg-white/10"
         >
-          ←
+          <IconArrowLeft className="h-5 w-5" />
         </button>
         <h2 className="flex-1 text-center text-lg font-bold">
           {winnerId ? 'Kayıpları Gir' : 'Eli Kim Kazandı?'}
@@ -61,7 +62,7 @@ export default function HandResolutionModal({
                   onClick={() => setWinnerId(p.id)}
                   className={`flex min-h-24 flex-col items-center justify-center gap-1 rounded-2xl border-2 bg-white/5 px-3 py-4 text-center active:scale-95 ${c.outline}`}
                 >
-                  <span className="text-3xl leading-none">{p.emoji}</span>
+                  <p.icon className="h-8 w-8" />
                   <span className="text-sm font-bold">{p.nickname}</span>
                   <span className="text-xs opacity-60">{p.name}</span>
                 </button>
@@ -70,26 +71,31 @@ export default function HandResolutionModal({
           </div>
         ) : (
           <div className="flex flex-col gap-3">
-            <div className="rounded-xl bg-emerald-500/10 px-3 py-2 text-sm text-emerald-300">
-              Kazanan:{' '}
-              <span className="font-bold">
-                {activePlayers.find((p) => p.id === winnerId)?.emoji}{' '}
-                {activePlayers.find((p) => p.id === winnerId)?.nickname}
-              </span>
-            </div>
+            {(() => {
+              const winner = activePlayers.find((p) => p.id === winnerId)
+              if (!winner) return null
+              return (
+                <div className="flex items-center gap-2 rounded-xl bg-emerald-500/10 px-3 py-2 text-sm text-emerald-300">
+                  <span>Kazanan:</span>
+                  <winner.icon className="h-5 w-5" />
+                  <span className="font-bold">{winner.nickname}</span>
+                </div>
+              )
+            })()}
             {losers.map((p) => (
               <div
                 key={p.id}
                 className="flex items-center gap-3 rounded-2xl border border-white/10 bg-white/5 p-3"
               >
-                <span className="text-2xl">{p.emoji}</span>
+                <p.icon className="h-6 w-6 shrink-0" />
                 <div className="flex-1">
                   <div className="text-sm font-semibold">{p.nickname}</div>
                   <div className="text-xs text-white/50">{p.name} kaç kaybetti?</div>
                 </div>
                 <input
-                  type="text"
+                  type="tel"
                   inputMode="numeric"
+                  pattern="[0-9]*"
                   placeholder="0"
                   value={losses[p.id] ?? ''}
                   onChange={(e) => setLoss(p.id, e.target.value)}

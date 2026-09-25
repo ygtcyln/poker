@@ -1,5 +1,5 @@
 import { PLAYERS } from '../data/players'
-import type { CompletedGame, GameState, HandRecord, PlayerId } from '../types'
+import type { CompletedGame, GameState, HandRecord, PlayerId, PlayerProfile } from '../types'
 
 function clone<T>(obj: T): T {
   return JSON.parse(JSON.stringify(obj)) as T
@@ -135,7 +135,7 @@ export interface LeaderboardRow {
   id: PlayerId
   name: string
   nickname: string
-  emoji: string
+  icon: PlayerProfile['icon']
   color: string
   gamesPlayed: number
   wins: number
@@ -162,7 +162,7 @@ export function computeLeaderboard(history: CompletedGame[]): LeaderboardRow[] {
       id: profile.id,
       name: profile.name,
       nickname: profile.nickname,
-      emoji: profile.emoji,
+      icon: profile.icon,
       color: profile.color,
       gamesPlayed: s.gamesPlayed,
       wins: s.wins,

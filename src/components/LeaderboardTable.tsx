@@ -1,3 +1,4 @@
+import { IconMedal, IconTrophy } from './icons'
 import { colorOf } from '../lib/colorClasses'
 import { formatSignedTL } from '../lib/format'
 import type { LeaderboardRow } from '../lib/gameLogic'
@@ -6,24 +7,28 @@ interface LeaderboardTableProps {
   rows: LeaderboardRow[]
 }
 
-const MEDALS = ['🥇', '🥈', '🥉']
+const RANK_STYLES = [
+  { Icon: IconTrophy, className: 'h-4 w-4 text-amber-400' },
+  { Icon: IconMedal, className: 'h-4 w-4 text-slate-300' },
+  { Icon: IconMedal, className: 'h-4 w-4 text-orange-400' },
+]
 
 export default function LeaderboardTable({ rows }: LeaderboardTableProps) {
   return (
     <ul className="flex flex-col gap-2">
       {rows.map((row, idx) => {
         const c = colorOf(row.color)
-        const medal = row.wins > 0 ? MEDALS[idx] : undefined
+        const rank = row.wins > 0 ? RANK_STYLES[idx] : undefined
         return (
           <li
             key={row.id}
             className={`flex items-center gap-3 rounded-2xl border border-white/10 p-3 ${c.soft}`}
           >
             <span className="w-6 text-center text-sm font-bold text-white/40">{idx + 1}</span>
-            <span className="text-2xl">{row.emoji}</span>
+            <row.icon className={`h-7 w-7 shrink-0 ${c.text}`} />
             <div className="min-w-0 flex-1">
-              <div className="flex items-center gap-1 truncate text-sm font-semibold">
-                {row.nickname} {medal}
+              <div className="flex items-center gap-1.5 truncate text-sm font-semibold">
+                {row.nickname} {rank && <rank.Icon className={rank.className} />}
               </div>
               <div className="truncate text-xs text-white/50">
                 {row.name} · {row.gamesPlayed} oyun

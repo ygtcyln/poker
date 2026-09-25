@@ -35,9 +35,9 @@ export default function BuyInScreen({ playerIds, onBack, onStart }: BuyInScreenP
             return (
               <span
                 key={id}
-                className="flex items-center gap-1 rounded-full bg-white/10 px-3 py-1 text-sm"
+                className="flex items-center gap-1.5 rounded-full bg-white/10 px-3 py-1 text-sm"
               >
-                {p.emoji} {p.nickname}
+                <p.icon className="h-4 w-4" /> {p.nickname}
               </span>
             )
           })}
@@ -65,8 +65,9 @@ export default function BuyInScreen({ playerIds, onBack, onStart }: BuyInScreenP
 
         {customMode && (
           <input
-            type="text"
+            type="tel"
             inputMode="numeric"
+            pattern="[0-9]*"
             autoFocus
             placeholder="Örn. 15000"
             value={customValue}
