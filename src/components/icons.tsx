@@ -82,6 +82,22 @@ export function IconCards(props: IconProps) {
   )
 }
 
+export function IconJokerFigure(props: IconProps) {
+  return (
+    <Icon {...props}>
+      <path d="M4.5 9.5c.5-3.3 1.8-5.2 2.8-6.2.9 1.4 1.5 2.9 1.9 4.4.6-2.3 1.7-4 3.2-5.2 1.5 1.4 2.2 3.1 2.5 5.2.7-1.2 1.6-2.6 3.1-3.4-.2 2.1-.8 3.9-1.9 5.2" />
+      <circle cx="5.3" cy="4.2" r="0.8" fill="currentColor" stroke="none" />
+      <circle cx="12" cy="2.4" r="0.8" fill="currentColor" stroke="none" />
+      <circle cx="18.2" cy="4.7" r="0.8" fill="currentColor" stroke="none" />
+      <circle cx="12" cy="13" r="6" />
+      <circle cx="9.6" cy="12" r="0.9" fill="currentColor" stroke="none" />
+      <circle cx="14.4" cy="12" r="0.9" fill="currentColor" stroke="none" />
+      <path d="M9 15c1 1.3 5 1.3 6 0" />
+      <path d="M4.5 22c.6-3.3 3.3-5.5 7.5-5.5s6.9 2.2 7.5 5.5" />
+    </Icon>
+  )
+}
+
 export function IconJokerCard(props: IconProps) {
   return (
     <Icon {...props}>
