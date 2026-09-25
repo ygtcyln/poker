@@ -10,7 +10,7 @@ import type { PlayerId, PlayerProfile } from '../types'
 
 export const PLAYERS: PlayerProfile[] = [
   { id: 'yigit', name: 'Yiğit', nickname: 'Nerdesin Pango', icon: IconYinYang, color: 'amber' },
-  { id: 'sami', name: 'Sami', nickname: 'Sessiz Suikastçı', icon: IconNinja, color: 'slate' },
+  { id: 'sami', name: 'Sami', nickname: 'Orkun Kökçüüü', icon: IconNinja, color: 'slate' },
   { id: 'merdo', name: 'Merdo', nickname: 'Patron', icon: IconBriefcase, color: 'violet' },
   { id: 'ibo', name: 'İbo', nickname: 'Joker', icon: IconJesterHat, color: 'rose' },
   { id: 'ugur', name: 'Uğur', nickname: 'Şanslı Uğur', icon: IconClover, color: 'emerald' },
