@@ -12,7 +12,7 @@ export const PLAYERS: PlayerProfile[] = [
   { id: 'yigit', name: 'Yiğit', nickname: 'Nerdesin Pango', icon: IconYinYang, color: 'amber' },
   { id: 'sami', name: 'Sami', nickname: 'Orkun Kökçüüü', icon: IconNinja, color: 'slate' },
   { id: 'merdo', name: 'Merdo', nickname: 'Nigga', icon: IconMerdoPhoto, color: 'violet' },
-  { id: 'ibo', name: 'İbo', nickname: 'Joker', icon: IconJesterHat, color: 'rose' },
+  { id: 'ibo', name: 'İbo', nickname: 'Filozof', icon: IconJesterHat, color: 'rose' },
   { id: 'ugur', name: 'Uğur', nickname: 'Şanslı Uğur', icon: IconClover, color: 'emerald' },
   { id: 'cagri', name: 'Çağrı', nickname: 'Santral', icon: IconPhone, color: 'sky' },
 ]
